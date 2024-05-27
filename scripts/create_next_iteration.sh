@@ -2,15 +2,9 @@ if [[ $(ls -Art | grep .py) ]]; then
     echo "found a python file"
     # get most recent file and increment
     fullfile=$(ls -Art | grep .py | tail -n 1 | tr -d '0-9')
-    echo $fullfile
-
     filename=$(basename -- "$fullfile")
     extension="${filename##*.}"
     filename="${filename%.*}"
-
-    echo $filename
-    echo $extension
-    echo $filename
 
     # start counting at v2, and increment until a slot is found
     i=2
