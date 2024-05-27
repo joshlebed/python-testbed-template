@@ -18,9 +18,9 @@ if [[ $(ls -Art | grep .py) ]]; then
         let i++
     done
     filename=$filename$i
-    code "$filename".$extension
+    $VISUAL "$filename".$extension
 
 else
     echo "no python files found, creating a new one"
-    code version1.py
+    $VISUAL version1.py
 fi
